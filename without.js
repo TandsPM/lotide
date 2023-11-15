@@ -20,7 +20,7 @@ const without = function(source, removeItems) {
   let result = [];
   for (let i = 0; i < source.length; i++) {
     // check if source is not in the remove
-    if (!(source in removeItems)) {
+    if (!removeItems.includes(source[i])) {
       result.push(source[i]);
     }
   }
