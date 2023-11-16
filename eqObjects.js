@@ -32,8 +32,13 @@ const eqObjects = function(object1, object2) {
   // check if one key has more keys than the other - use Object.keys
   const keys = Object.keys(object1);
 
+
   // loop through the keys for only one of the objects
   for (let key of keys) {
+
+    if (object1[key].length !== object2[key].length) {
+      return false;
+    }
     // check if values at the current key in both objects are arrays
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
     // compare both objects' values for that key - no match return false
