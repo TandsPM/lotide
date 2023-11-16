@@ -11,6 +11,9 @@ const letterPositions = function(sentence) {
   for (let i = 0; i < sentence.length; i++) {
     // get current character
     const index = sentence[i];
+
+    // check if current character is a space, if is, skip to next iteration of loop
+    if (index !== ' ') {
     // if character not in results object, create array
     if (!results[index]) {
       results[index] = [];
@@ -19,6 +22,7 @@ const letterPositions = function(sentence) {
     // The push() method of Array instances adds the specified elements to 
     // the end of an array and returns the new length of the array
     results[index].push(i);
+    }
   }
   return results;
 }
@@ -26,7 +30,7 @@ const letterPositions = function(sentence) {
 
 
 
-const result1 = letterPositions("lighthouse in the house".replaceAll(' ', ''));
+const result1 = letterPositions("lighthouse in the house");
 
 
 const eqArrays = function(arr1, arr2) {
@@ -55,4 +59,8 @@ const assertArraysEqual = function(actual, expected) {
 
 console.log(result1);
 assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(result1['l'], [0]);
+assertArraysEqual(result1['i'], [1, 11]);
+assertArraysEqual(result1['g'], [2]);
+assertArraysEqual(result1['h'], [3, 5, 15, 18]);
 
