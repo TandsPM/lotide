@@ -29,6 +29,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
+console.log(result1);
 assertEqual(result1['l'], 1);
 assertEqual(result1['i'], 2);
