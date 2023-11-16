@@ -5,9 +5,13 @@
 
 const findKeyByValue = function(obj, value) {
   // use Object.keys()
-  for (const item of value) {
-  if (Object.keys(obj)) {
-    return value;
+  const keys = Object.keys(obj);
+
+    // iterate over the keys
+  for (const key of keys) {
+// check if value at current key = the value parameter
+  if (obj[key] === value) {
+    return key;
     } else {
       // if no key with that given value - return undefined
       return undefined;
