@@ -5,6 +5,7 @@ const countLetters = function(letters) {
 
 
   // use for...of loop
+  // get rid of blank spaces
   for (const item of letters) {
     // count each letter - return count of each
     if (results[item]) {
@@ -16,7 +17,7 @@ const countLetters = function(letters) {
   return results;
 }
 
-  const result1 = countLetters("lighthouse in the house");
+const result1 = countLetters("lighthouse in the house".replaceAll(' ', ''));
 
 
 const assertEqual = function(actual, expected) {
