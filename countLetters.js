@@ -12,8 +12,8 @@ const countLetters = function(letters) {
     } else {
       results[item] = 1;
     }
-    return results;
   }
+  return results;
 }
 
   const result1 = countLetters("lighthouse in the house");
@@ -30,53 +30,6 @@ const assertEqual = function(actual, expected) {
 };
 
 
-assertEqual(result1[countLetters]);
-
-
-/*
-Therefore countLetters("lighthouse in the house") would return:
-{
-  l: 1,
-  i: 2,
-  g: 1,
-  h: 4,
-  t: 2,
-  o: 2,
-  u: 2,
-  s: 2,
-  e: 3,
-  n: 1,
-}
-const countOnly = function(allItems, itemsToCount) {
-const results = {};
-
-for (const item of allItems) {
-  // increment counter for each item - set property w/ that string key tp:
-  //  the value that was already there (or 0 is nothing) with 1 added
-  if (itemsToCount[item]) {
-  if (results[item]) {
-    results[item] += 1;
-  } else {
-    results[item] = 1;
-  }
-  console.log(item);
-}
-}
-return results;
-}
-
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, {"Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
-
-*/
+assertEqual(result1['l'], 1);
+assertEqual(result1['i'], 2);
+assertEqual(result1['L'], 1);
