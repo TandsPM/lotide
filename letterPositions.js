@@ -1,17 +1,29 @@
 // return all the indices (zero-based positions) in the string where each character is found
 // should tell you the i of the number ex) 'h' is at i 0
+ // get rid of blank spaces
 
 const letterPositions = function(sentence) {
+  // initialize empty object
   const results = {};
+
   // logic to update results here
-  // use for...of loop
-  // get rid of blank spaces
-  for (const indexes of sentence) {
-    if (!results[indexes[0]]) results[indexes[0]] = [];
-    results[indexes[0]].push(indexes.index);
+  // loop through each character in the sentence
+  for (let i = 0; i < sentence.length; i++) {
+    // get current character
+    const index = sentence[i];
+    // if character not in results object, create array
+    if (!results[index]) {
+      results[index] = [];
     }
-    return results;
+    // push current position to the array associated with the character
+    // The push() method of Array instances adds the specified elements to 
+    // the end of an array and returns the new length of the array
+    results[index].push(i);
   }
+  return results;
+}
+ 
+
 
 
 const result1 = letterPositions("lighthouse in the house".replaceAll(' ', ''));
