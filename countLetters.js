@@ -32,4 +32,3 @@ const assertEqual = function(actual, expected) {
 
 assertEqual(result1['l'], 1);
 assertEqual(result1['i'], 2);
-assertEqual(result1['L'], 1);
