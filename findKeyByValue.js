@@ -14,11 +14,10 @@ const findKeyByValue = function(obj, value) {
   if (obj[key] === value) {
     // return the hey where we found the show
     return key;
-    } else {
-      // if no key with that given value - return undefined
-      return undefined;
-    }
+    } 
   }
+  // if no key with that given value - return undefined
+  return undefined;
 }
 
 const bestTVShowsByGenre = {
