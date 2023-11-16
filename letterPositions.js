@@ -10,18 +10,18 @@ const letterPositions = function(sentence) {
   // loop through each character in the sentence
   for (let i = 0; i < sentence.length; i++) {
     // get current character
-    const index = sentence[i];
+    const char = sentence[i];
 
     // check if current character is a space, if is, skip to next iteration of loop
-    if (index !== ' ') {
+    if (char !== ' ') {
     // if character not in results object, create array
-    if (!results[index]) {
-      results[index] = [];
+    if (!results[char]) {
+      results[char] = [];
     }
     // push current position to the array associated with the character
     // The push() method of Array instances adds the specified elements to 
     // the end of an array and returns the new length of the array
-    results[index].push(i);
+    results[char].push(i);
     }
   }
   return results;
