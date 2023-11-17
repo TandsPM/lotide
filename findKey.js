@@ -3,15 +3,13 @@
 
 const findKey = function(obj, callback) {
   for (const key in obj) {
-    console.log('key: ', key);
     if (callback(obj[key])) {
-    console.log('key: ', key);
   return(key);
     }
   }
    return undefined;
 }
-
+/*
 const keyValue = function(obj, value) {
   for (const key in obj) {
     if (obj[key] === value) {
@@ -19,6 +17,7 @@ const keyValue = function(obj, value) {
     }
   }
 }
+*/
 
 findKey({
   "Blue Hill": { stars: 1 },
@@ -40,7 +39,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+let result = findKey({
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+}, x => x.stars === 2); // => "noma"
 
-assertEqual(findKey, "elBulli");
-assertEqual(findKey, "noma");
+assertEqual(result, "noma");
 
