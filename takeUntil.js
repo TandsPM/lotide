@@ -17,6 +17,7 @@
 //So, how might you go about implementing the takeUntil function? What is the first
 //step in building this function that comes to mind?//
 
+
 const takeUntil = function(array, callback) {
   const arr = [];
 

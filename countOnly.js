@@ -26,8 +26,8 @@ for (const item of allItems) {
   } else {
     results[item] = 1;
   }
-}
   console.log(item);
+}
 }
 return results;
 }
