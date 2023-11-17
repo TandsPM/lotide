@@ -9,15 +9,6 @@ const findKey = function(obj, callback) {
   }
    return undefined;
 }
-/*
-const keyValue = function(obj, value) {
-  for (const key in obj) {
-    if (obj[key] === value) {
-      return key;
-    }
-  }
-}
-*/
 
 findKey({
   "Blue Hill": { stars: 1 },
