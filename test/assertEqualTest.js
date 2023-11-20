@@ -1,6 +1,23 @@
+const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(15, 12);
-assertEqual("Coding Project", "Coding Project");
+
+
+describe("#assertEqual", () => {
+  it("return false if !== same item", () => {
+    assert.strictEqual(assertEqual("Lighthouse Labs", "Bootcamp"), undefined);
+  });
+
+  it("return true if === same item", () => {
+    assert.strictEqual(assertEqual("Coding Project", "Coding Project"), undefined);
+  });
+
+  it("return false if !== same item", () => {
+    assert.strictEqual(assertEqual(15, 12), undefined);
+  });
+
+  it("return true if === same item", () => {
+    assert.strictEqual(assertEqual(1, 1), undefined);
+  });
+});
+
