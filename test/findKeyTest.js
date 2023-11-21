@@ -2,7 +2,6 @@ const assert = require('chai').assert;
 const findKey = require('../findKey');
 
 
-
 describe("#findKey", () => {
   it("return noma === 2", () => {
     let result = findKey({
