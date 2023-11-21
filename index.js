@@ -19,18 +19,18 @@ module.exports = {
   head: head,
   tail: tail,
   middle: middle,
-  without: without,
-  takeUntil: takeUntil,
-  letterPositions: letterPositions,
-  findKeyByValue: findKeyByValue,
-  findKey: findKey,
-  eqObjects: eqObjects,
-  countOnly: countOnly,
-  countLetters: countLetters,
-  assertObjectsEqual: assertObjectsEqual,
-  eqArrays: eqArrays,
-  assertEqual: assertEqual,
-  assertArraysEqual: assertArraysEqual
+  without,
+  takeUntil,
+  letterPositions,
+  findKeyByValue,
+  findKey,
+  eqObjects,
+  countOnly,
+  countLetters,
+  assertObjectsEqual,
+  eqArrays,
+  assertEqual,
+  assertArraysEqual
 
 };
 
