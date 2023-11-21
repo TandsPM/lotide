@@ -27,40 +27,4 @@ const letterPositions = function(sentence) {
   return results;
 }
  
-
-
-
-const result1 = letterPositions("lighthouse in the house");
-
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-    return false;
-    // AI suggest to replace the above code with
-    // return arr1.every((val, i) => val === arr2[i]);
-    }
-  }
-  return true;
-}
-  
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays (actual, expected)) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🟥🟥🟥 Assertion Failed: ${actual} !== ${expected}`);
-  }
-}
-
-console.log(result1);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(result1['l'], [0]);
-assertArraysEqual(result1['i'], [1, 11]);
-assertArraysEqual(result1['g'], [2]);
-assertArraysEqual(result1['h'], [3, 5, 15, 18]);
-
+module.exports = letterPositions;
